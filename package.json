@@ -1,6 +1,6 @@
 {
 	"name": "taisei",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"description": "construct schemas to validate data",
 	"main": "pkg/dist-node/index.js",
 	"types": "pkg/dist-types/index.d.ts",
