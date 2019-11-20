@@ -4,4 +4,5 @@ export { default as String } from './string';
 export { default as Object } from './object';
 export { default as Array } from './array';
 export { default as Number } from './number';
+export { default as Boolean } from './boolean';
 //# sourceMappingURL=index.js.map

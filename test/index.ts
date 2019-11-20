@@ -91,3 +91,17 @@ test("NumberSchema", t => {
 
   t.end()
 })
+
+test("BooleanSchema", t => {
+  t.ok(Schemas.Boolean)
+
+  const schema = new Schemas.Boolean()
+
+  t.deepEqual(schema.validate(true), [])
+  t.deepEqual(schema.validate(false), [])
+  t.deepEqual(schema.validate('3' as any), ['Expected typeof `boolean` not `string`'])
+  t.deepEqual(schema.validate(undefined), [])
+
+  t.end()
+})
+
