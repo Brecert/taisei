@@ -1,0 +1,1 @@
+{"version":3,"file":"primative.d.ts","sourceRoot":"","sources":["../../../src/schemas/primative.ts"],"names":[],"mappings":"AAAA,OAAO,MAAM,MAAM,UAAU,CAAA;AAE7B,MAAM,CAAC,OAAO,OAAO,eAAe,CAAC,CAAC,CAAE,SAAQ,MAAM,CAAC,CAAC,EAAE,MAAM,CAAC;IAE/D,QAAQ,CAAC,OAAO,SAA2B;IAQ3C,QAAQ,CAAC,KAAK,EAAE,CAAC,GAAG,SAAS,GAAG,MAAM,EAAE;CAOzC"}
