@@ -28,6 +28,15 @@ export default class ObjectSchema extends Schema<object, string> {
     })
   }
 
+  strict(message?: string) {
+    return this.addRule(input => {
+      const invalidKeys = Object.keys(input!).filter(key => !(key in this.shape))
+      if(invalidKeys.length > 0) {
+        return message || `Keys \`${invalidKeys.join(', ')}\` do not match the shape.`
+      }
+    })
+  }
+
   validate<T extends object>(input: T | undefined): ObjectSchemaType {
     const errors = this.validationRules
       .map(rule => rule(input))

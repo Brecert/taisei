@@ -71,6 +71,16 @@ class ObjectSchema extends Schema {
     });
   }
 
+  strict(message) {
+    return this.addRule(input => {
+      const invalidKeys = Object.keys(input).filter(key => !(key in this.shape));
+
+      if (invalidKeys.length > 0) {
+        return message || `Keys \`${invalidKeys.join(', ')}\` do not match the shape.`;
+      }
+    });
+  }
+
   validate(input) {
     const errors = this.validationRules.map(rule => rule(input)).filter(res => res !== undefined);
 

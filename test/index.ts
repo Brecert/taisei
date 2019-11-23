@@ -63,6 +63,13 @@ test("ObjectSchema", t => {
     t.end()
   })
 
+  t.test('object strict mode', t => {
+    const strict = new Schemas.Object({ a: new Schemas.String().required() }).required().strict()
+    t.deepEqual(strict.validate({ a: '', b: '', c: '' }),  [ 'Keys `b, c` do not match the shape.' ])
+
+    t.end()
+  })
+
   t.end()
 })
 

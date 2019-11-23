@@ -9,6 +9,7 @@ export default class ObjectSchema extends Schema<object, string> {
     shape: ObjectShape;
     constructor(shape: ObjectShape);
     required(message?: string): this;
+    strict(message?: string): this;
     validate<T extends object>(input: T | undefined): ObjectSchemaType;
 }
 //# sourceMappingURL=object.d.ts.map
